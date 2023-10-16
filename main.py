@@ -1,6 +1,5 @@
 #imports
 import pygame
-
 import random
 
 pygame.init()
@@ -8,7 +7,7 @@ pygame.init()
 screenSize = (800, 600)
 screen = pygame.display.set_mode(screenSize)
 
-pygame.display.set_caption("Title")
+pygame.display.set_caption("MedSchool")
 
 clock = pygame.time.Clock()
 
@@ -133,27 +132,7 @@ question = font1.render("What is that disease?", 1, green)
 
 #image blits
 bodyDiagram = pygame.image.load("bodyDiagram.png")
-# #bodyDiagram = pygame.transform.scale(bodyDiagram, (225,297))
 bodyDiagram = pygame.transform.scale(bodyDiagram, (300, 400))
-# armBoneRed = pygame.image.load("bodyDiagramOrgans/armbonered (1).png")
-# armBonePink = pygame.image.load("bodyDiagramOrgans/armbonepink (1).png")
-# armSkinPink = pygame.image.load("bodyDiagramOrgans/armskin (1).png")
-# armSkinRed = pygame.image.load("bodyDiagramOrgans/armskinred (1).png")
-# brainPink = pygame.image.load("bodyDiagramOrgans/brainpink (1).png")
-# brainRed = pygame.image.load("bodyDiagramOrgans/brainred (1).png")
-# kidneysPink = pygame.image.load("bodyDiagramOrgans/kidneyspink (1).png")
-# kidneysRed = pygame.image.load("bodyDiagramOrgans/kidneysred (1).png")
-# legsPink = pygame.image.load("bodyDiagramOrgans/legspink (1).png")
-# legsRed = pygame.image.load("bodyDiagramOrgans/legsred (1).png")
-# lungsPink = pygame.image.load("bodyDiagramOrgans/lungspink (1).png")
-# lungsRed = pygame.image.load("bodyDiagramOrgans/lungsred (1).png")
-# stomachPink = pygame.image.load("bodyDiagramOrgans/stomachpink (1).png")
-# stomachRed = pygame.image.load("bodyDiagramOrgans/stomachred (1).png")
-# heartPink = pygame.image.load("bodyDiagramOrgans/heartPink (1).png")
-# heartRed = pygame.image.load("bodyDiagramOrgans/heartRed (1).png")
-                               
-#
-
 
 #answers
 answerIndex = random.randint(0, 4)
@@ -180,8 +159,6 @@ option2 = font.render(answersList[1], 1, buttonPlayGreen)
 option3 = font.render(answersList[2], 1, buttonPlayGreen)
 option4 = font.render(answersList[3], 1, buttonPlayGreen)
 
-# print(len(symptomsList[answerIndex]))
-
 #clickable boxes
 class Boxes:
   #attributes
@@ -197,8 +174,6 @@ class Boxes:
   boxNumber = 0
   counter = 0
   symptomsOrgansMatch = 0
-  
-  #text blit
 
   #methods
   def draw(self):
@@ -256,15 +231,6 @@ class Boxes:
       #print(symptom[2])
       text2 = font2.render(symptom[2], 1, green)
       screen.blit(text2, (125, 200))
-      
-      #for i in range(len(symptom)):
-      #[1,2,3]
-      #[1]
-      # print(symptom)
-      #print(symptom)
-      #text = font2.render(symptom[i], 1, green)
-
-      #screen.blit(text, (100, 100))
 
 if len(symptomsList[answerIndex]) >= 1:
   boxes = Boxes()
@@ -290,14 +256,11 @@ def titlePage():
       pygame.draw.rect(screen, dankGreen, (x, y - offset, 50, 50), 1)
 
   pygame.draw.rect(screen, buttonPlayGreen, (300, yButtonsPlay, 175, 50), 4)
-  pygame.draw.rect(screen, buttonGreenCredits, (300, yButtonsCredits, 175, 50),
-                   4)
+  pygame.draw.rect(screen, buttonGreenCredits, (300, yButtonsCredits, 175, 50),4)
 
   screen.blit(buttonCredits, (340, yOffsetTextPlay))
   screen.blit(buttonPlay, (358, yOffsetTextCredits))
   screen.blit(title, (190, titleYOffset))
-  
-
 
 def game():
   dankGreen = [0, 60, 0]
@@ -327,7 +290,6 @@ def game():
         boxes3.draw()
         boxes3.boxesPos = (100, 500)
 
-
 def trivia():
   screen.fill(black)
 
@@ -354,14 +316,12 @@ def trivia():
   screen.blit(option3, [450, 440])
   screen.blit(option4, [450, 540])
 
-
 def victory():
   screen.fill(black)
   W = fontend.render("GG Doctor, I can't believe you got that!", 1, green)
   screen.blit(W, (50, 50))
   W1 = fontend.render("Now, go outside and get some air!", 1, green)
   screen.blit(W1, (100, 400))
-
 
 loopExit = True
 while loopExit:
@@ -387,7 +347,6 @@ while loopExit:
       loopExit = False
 
     if page == 0:
-
       if mousePosition[0] >= 300 and mousePosition[0] <= 475 and mousePosition[
           1] >= 400 and mousePosition[
               1] <= 450 and creditsButtonPressed == False:
@@ -421,7 +380,6 @@ while loopExit:
                 0] + 70 and mousePosition[1] >= boxes.boxesPos[
                     1] and mousePosition[1] <= boxes.boxesPos[
                         1] + 70 and gameButtonPressed == False:
-          # print(boxes.boxNumber)
           gameButtonPressed = True
       if len(symptomsList[answerIndex]) >= 2:
         if event.type == pygame.MOUSEBUTTONDOWN and mousePosition[
@@ -429,7 +387,6 @@ while loopExit:
                 0] + 70 and mousePosition[1] >= boxes2.boxesPos[
                     1] and mousePosition[1] <= boxes2.boxesPos[
                         1] + 70 and gameButtonPressed2 == False:
-          # print(boxes2.boxNumber)
           gameButtonPressed2 = True
       if len(symptomsList[answerIndex]) == 3:
         if event.type == pygame.MOUSEBUTTONDOWN and mousePosition[
@@ -437,7 +394,6 @@ while loopExit:
                 0] + 70 and mousePosition[1] >= boxes3.boxesPos[
                     1] and mousePosition[1] <= boxes3.boxesPos[
                         1] + 70 and gameButtonPressed3 == False:
-          # print(boxes3.boxNumber)
           gameButtonPressed3 = True
 
       if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
@@ -468,8 +424,6 @@ while loopExit:
           hover = True
       elif hoverForward == False:
         forwardButtonGreen = green
-
-    
 
     if page == 3:
       #backbutton 2
@@ -543,9 +497,6 @@ while loopExit:
       elif hoverLocationD == False:
         ButtonDGreen = green
 
-      
-
-  #print(hoverCredits)
   if buttonPressed == True:
     #animation for title --> game
     dankGreen = [0, 60 - colorDarken, 0]
@@ -582,34 +533,11 @@ while loopExit:
       page = 0
 
   if forwardButtonPressed == True:
-    # dankGreen = [0, 60 - colorDarken, 0]
-    # colorDarken += 3
-    # if colorDarken == 0:
     dankGreen = [0, 60, 0]
     forwardButtonPressed = False
     page = 3
 
   if backButton2Pressed == True:
-    # dankGreen = [0, 60 - colorDarken, 0]
-    # pygame.draw.rect(screen, green, [125, questionYbox, 550, 200], 4)
-    # pygame.draw.rect(screen, ButtonAGreen, [125, ySubbox1, 250, 80], 4)
-    # pygame.draw.rect(screen, ButtonBGreen, [425, ySubbox2, 250, 80], 4)
-    # pygame.draw.rect(screen, ButtonCGreen, [125, ySubbox3, 250, 80], 4)
-    # pygame.draw.rect(screen, ButtonDGreen, [425, ySubbox4, 250, 80], 4)
-
-    # screen.blit(question, [180, 190])
-    # screen.blit(option1, [150, 440])
-    # screen.blit(option2, [150, 540])
-    # screen.blit(option3, [450, 440])
-    # screen.blit(option4, [450, 540])
-    # colorDarken += 3
-    # questionYbox -=10
-    # ySubbox1 +=10
-    # ySubbox2 +=10
-    # ySubbox3 +=10
-    # ySubbox4 +=10
-    # if colorDarken == 60:
-    # dankGreen = [0, 60, 0]
     backButton2Pressed = False
     backButton2Green = green
     page = 1
@@ -664,22 +592,6 @@ while loopExit:
                        [rectanglePos, 50, rectangleThickness, 500])
       pygame.draw.rect(screen, green,
                        [rectanglePos, 50, rectangleThickness, 500], 5)
-
-    # elif rectangleThickness >= 600: 
-    #   cred_title = fontTitle.render("CREDITS", 1, green)
-    #   screen.blit(cred_title, (150, 100))
-    #   credit_1 = font2.render("Naayeli Prakash - User Interface Designer/Artist", 1, green)
-    #   screen.blit(credit_1, (150, 150))
-    #   credit_2 = font2.render("Terry Hao - Senior Developer/Master Coder", 1, green)
-    #   screen.blit(credit_2, (150, 200))
-    #   credit_3 = font2.render("Lang-Ji Li - Quality Assurance Engineer/antiproblem", 1, green)
-    #   screen.blit(credit_3, (150, 250))
-    #   credit_4 = font2.render("Jerry Huang - Lead Researcher/investigator", 1, green)
-    #   screen.blit(credit_4, (150, 350))
-    #   credit_5 = font2.render("Made by Pygame", 1, green)
-    #   screen.blit(credit_5, (150, 400))
-    #   credit_6 = font2.render("Thanks for HC Hackathon", 1, green)
-
     else:
       if bottomEndpoint <= 555:
         pygame.draw.line(screen, green, (395, topEndpoint),
