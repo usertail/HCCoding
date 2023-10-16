@@ -119,11 +119,11 @@ descriptions = [
 ]
 
 #main fonts
-font = pygame.font.Font('Eight-Bit Madness.ttf', 32)
-font2 = pygame.font.Font('Eight-Bit Madness.ttf', 25)
-fontTitle = pygame.font.Font('Eight-Bit Madness.ttf', 90)
-font1 = pygame.font.Font('Eight-Bit Madness (copy).ttf', 50)
-fontend = pygame.font.Font('Eight-Bit Madness (copy).ttf', 45)
+font = pygame.font.Font("C:\\Users\\ritfr\\HCCoding\\Eight-Bit Madness.ttf", 32)
+font2 = pygame.font.Font("C:\\Users\\ritfr\\HCCoding\\Eight-Bit Madness.ttf", 25)
+fontTitle = pygame.font.Font("C:\\Users\\ritfr\\HCCoding\\Eight-Bit Madness.ttf", 90)
+font1 = pygame.font.Font("C:\\Users\\ritfr\\HCCoding\\Eight-Bit Madness.ttf", 50)
+fontend = pygame.font.Font("C:\\Users\\ritfr\\HCCoding\\Eight-Bit Madness.ttf", 45)
 
 #text blits
 buttonCredits = font.render("Credits", 1, buttonPlayGreen)
@@ -133,29 +133,26 @@ question = font1.render("What is that disease?", 1, green)
 
 #image blits
 bodyDiagram = pygame.image.load("bodyDiagram.png")
-#bodyDiagram = pygame.transform.scale(bodyDiagram, (225,297))
+# #bodyDiagram = pygame.transform.scale(bodyDiagram, (225,297))
 bodyDiagram = pygame.transform.scale(bodyDiagram, (300, 400))
-armBoneRed = pygame.image.load("bodyDiagramOrgans/armbonered (1).png")
-armBonePink = pygame.image.load("bodyDiagramOrgans/armbonepink (1).png")
-armSkinPink = pygame.image.load("bodyDiagramOrgans/armskin (1).png")
-armSkinRed = pygame.image.load("bodyDiagramOrgans/armskinred (1).png")
-brainPink = pygame.image.load("bodyDiagramOrgans/brainpink (1).png")
-brainRed = pygame.image.load("bodyDiagramOrgans/brainred (1).png")
-kidneysPink = pygame.image.load("bodyDiagramOrgans/kidneyspink (1).png")
-kidneysRed = pygame.image.load("bodyDiagramOrgans/kidneysred (1).png")
-legsPink = pygame.image.load("bodyDiagramOrgans/legspink (1).png")
-legsRed = pygame.image.load("bodyDiagramOrgans/legsred (1).png")
-lungsPink = pygame.image.load("bodyDiagramOrgans/lungspink (1).png")
-lungsRed = pygame.image.load("bodyDiagramOrgans/lungsred (1).png")
-stomachPink = pygame.image.load("bodyDiagramOrgans/stomachpink (1).png")
-stomachRed = pygame.image.load("bodyDiagramOrgans/stomachred (1).png")
-heartPink = pygame.image.load("bodyDiagramOrgans/heartPink (1).png")
-heartRed = pygame.image.load("bodyDiagramOrgans/heartRed (1).png")
+# armBoneRed = pygame.image.load("bodyDiagramOrgans/armbonered (1).png")
+# armBonePink = pygame.image.load("bodyDiagramOrgans/armbonepink (1).png")
+# armSkinPink = pygame.image.load("bodyDiagramOrgans/armskin (1).png")
+# armSkinRed = pygame.image.load("bodyDiagramOrgans/armskinred (1).png")
+# brainPink = pygame.image.load("bodyDiagramOrgans/brainpink (1).png")
+# brainRed = pygame.image.load("bodyDiagramOrgans/brainred (1).png")
+# kidneysPink = pygame.image.load("bodyDiagramOrgans/kidneyspink (1).png")
+# kidneysRed = pygame.image.load("bodyDiagramOrgans/kidneysred (1).png")
+# legsPink = pygame.image.load("bodyDiagramOrgans/legspink (1).png")
+# legsRed = pygame.image.load("bodyDiagramOrgans/legsred (1).png")
+# lungsPink = pygame.image.load("bodyDiagramOrgans/lungspink (1).png")
+# lungsRed = pygame.image.load("bodyDiagramOrgans/lungsred (1).png")
+# stomachPink = pygame.image.load("bodyDiagramOrgans/stomachpink (1).png")
+# stomachRed = pygame.image.load("bodyDiagramOrgans/stomachred (1).png")
+# heartPink = pygame.image.load("bodyDiagramOrgans/heartPink (1).png")
+# heartRed = pygame.image.load("bodyDiagramOrgans/heartRed (1).png")
                                
-pinkOrgans = [armBonePink, brainPink, armSkinPink, lungsPink, armSkinPink, kidneysPink, heartPink]
-
-redOrgans = [armBoneRed, brainRed, armSkinRed, lungsRed, armSkinRed, kidneysRed, heartRed] 
-
+#
 
 
 #answers
