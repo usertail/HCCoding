@@ -118,11 +118,11 @@ descriptions = [
 ]
 
 #main fonts
-font = pygame.font.Font("C:\\Users\\ritfr\\HCCoding\\Eight-Bit Madness.ttf", 32)
-font2 = pygame.font.Font("C:\\Users\\ritfr\\HCCoding\\Eight-Bit Madness.ttf", 25)
-fontTitle = pygame.font.Font("C:\\Users\\ritfr\\HCCoding\\Eight-Bit Madness.ttf", 90)
-font1 = pygame.font.Font("C:\\Users\\ritfr\\HCCoding\\Eight-Bit Madness.ttf", 50)
-fontend = pygame.font.Font("C:\\Users\\ritfr\\HCCoding\\Eight-Bit Madness.ttf", 45)
+font = pygame.font.Font("Eight-Bit Madness.ttf", 32)
+font2 = pygame.font.Font("Eight-Bit Madness.ttf", 25)
+fontTitle = pygame.font.Font("Eight-Bit Madness.ttf", 90)
+font1 = pygame.font.Font("Eight-Bit Madness.ttf", 50)
+fontend = pygame.font.Font("Eight-Bit Madness.ttf", 45)
 
 #text blits
 buttonCredits = font.render("Credits", 1, buttonPlayGreen)
